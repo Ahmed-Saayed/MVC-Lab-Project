@@ -1,0 +1,24 @@
+﻿namespace Lab2.Models.ViewModels
+{
+    public class CourseVM
+    {
+        using System.ComponentModel.DataAnnotations;
+
+        [Required]
+        [StringLength(20, MinimumLength = 2)]
+        public string Course_Name { get; set; }
+
+        [Required]
+        [Range(50, 100, ErrorMessage = "Degree must be between 50 and 100")]
+        public int Degree { get; set; }
+
+        [Required]
+        public int Min_Degree { get; set; }
+
+        [Required]
+        public int hourse { get; set; }
+
+        public int Dep_ID { get; set; }
+        public List<Department> departments { get; set; }
+    }
+}

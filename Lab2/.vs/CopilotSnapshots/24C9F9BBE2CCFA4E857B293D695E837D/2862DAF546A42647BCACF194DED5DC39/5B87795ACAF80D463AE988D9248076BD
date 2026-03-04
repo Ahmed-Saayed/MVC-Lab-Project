@@ -1,0 +1,29 @@
+﻿using System.Collections.Generic;
+using Lab2.Models.ViewModels;
+using Lab2.Models;
+
+namespace Lab2.Services
+{
+    public static class CourseValidationService
+    {
+        public static List<KeyValuePair<string, string>> Validate(CourseVM vm, DataCon con)
+        {
+            var errors = new List<KeyValuePair<string, string>>();
+            if (vm == null) 
+                return errors;
+
+            if (con.Courses.Any(c => c.Course_Name == vm.Course_Name))
+                errors.Add(new KeyValuePair<string, string>(nameof(vm.Course_Name), "Course name must be unique within the department"));
+
+            if (vm.Min_Degree >= vm.Degree)
+                errors.Add(new KeyValuePair<string, string>(nameof(vm.Min_Degree), "Min degree must be less than Degree"));
+            
+
+            if (vm.hourse % 3 != 0)
+              errors.Add(new KeyValuePair<string, string>(nameof(vm.hourse), "Hours must be divisible by 3"));
+            
+
+            return errors;
+        }
+    }
+}

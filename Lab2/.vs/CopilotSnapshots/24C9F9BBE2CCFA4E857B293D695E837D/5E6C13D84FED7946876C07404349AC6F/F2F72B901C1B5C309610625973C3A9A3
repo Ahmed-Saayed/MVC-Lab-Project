@@ -1,0 +1,25 @@
+﻿@model List<Instructor>
+@{
+    ViewData["Title"] = "Show_All_Instructors";
+    lay
+}
+
+<h1>Show_All_Instructors</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    @foreach (Instructor item in Model)
+    {
+        <tr>
+            <td>@item.Inst_Id</td>
+            <td>@item.Inst_Name</td>
+            <td>
+                <a href="/Instructor/Edit/@item.Inst_Id">Edit</a>
+            </td>
+        </tr>
+    }
+
+</table>

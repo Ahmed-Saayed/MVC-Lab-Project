@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|c:\\users\\ahmed\\desktop\\folders\\iti\\mvc\\lab2\\lab2\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|c:\\users\\ahmed\\desktop\\folders\\iti\\mvc\\lab2\\lab2\\views\\course\\add_course.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|solutionrelative:views\\course\\add_course.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|c:\\users\\ahmed\\desktop\\folders\\iti\\mvc\\lab2\\lab2\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|c:\\users\\ahmed\\desktop\\folders\\iti\\mvc\\lab2\\lab2\\models\\viewmodels\\coursevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|solutionrelative:models\\viewmodels\\coursevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|c:\\users\\ahmed\\desktop\\folders\\iti\\mvc\\lab2\\lab2\\views\\instructor\\add_instructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{370B1524-42D5-4F5A-81FD-D40A2F96BA29}|Lab2.csproj|solutionrelative:views\\instructor\\add_instructor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Models\\Department.cs",
+              "ToolTip": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Models\\Department.cs",
+              "RelativeToolTip": "Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:19:34.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseVM.cs",
+              "DocumentMoniker": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Models\\ViewModels\\CourseVM.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\CourseVM.cs",
+              "ToolTip": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Models\\ViewModels\\CourseVM.cs*",
+              "RelativeToolTip": "Models\\ViewModels\\CourseVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:17:40.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Add_Course.cshtml",
+              "DocumentMoniker": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Views\\Course\\Add_Course.cshtml",
+              "RelativeDocumentMoniker": "Views\\Course\\Add_Course.cshtml",
+              "ToolTip": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Views\\Course\\Add_Course.cshtml*",
+              "RelativeToolTip": "Views\\Course\\Add_Course.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-01T22:16:54.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Add_Instructor.cshtml",
+              "DocumentMoniker": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Views\\Instructor\\Add_Instructor.cshtml",
+              "RelativeDocumentMoniker": "Views\\Instructor\\Add_Instructor.cshtml",
+              "ToolTip": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Views\\Instructor\\Add_Instructor.cshtml",
+              "RelativeToolTip": "Views\\Instructor\\Add_Instructor.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-01T22:16:42.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\AHMED\\Desktop\\Folders\\ITI\\MVC\\Lab2\\Lab2\\Controllers\\CourseController.cs*",
+              "RelativeToolTip": "Controllers\\CourseController.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwA0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:15:29.005Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+﻿using Lab2.Models.Validation;
+using System.ComponentModel.DataAnnotations;
+
+namespace Lab2.Models
+{
+    public class Course
+    {
+        public int Course_ID { get; set; } 
+        public string Course_Name { get; set; }
+        public int Degree { get; set; }
+        public int Min_Degree { get; set; }
+        public string hourse { get; set; }
+        public int Dep_ID { get; set; }
+        public Department Department { get; set; }
+        public List<Instructor> instructors { get; set; }
+        public List<Trainee> trainees { get; set; }
+        public List<crsResult> crsResults { get; set; }
+
+    }
+}

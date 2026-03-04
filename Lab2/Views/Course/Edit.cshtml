@@ -1,0 +1,61 @@
+﻿@using Lab2.Models.ViewModels
+
+@model CourseVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form action="/Course/SaveEdited/@Model.Course_ID" method="post">
+    <input asp-for="Course_ID" type="hidden" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div>
+        <label asp-for="Course_Name"></label>
+        <input asp-for="Course_Name" class="form-control" />
+        <span asp-validation-for="Course_Name" class="text-danger"></span>
+    </div>
+
+
+    <div>
+        <label asp-for="Degree"></label>
+        <input asp-for="Degree" class="form-control" />
+        <span asp-validation-for="Degree" class="text-danger"></span>
+
+    </div>
+
+
+    <div>
+        <label asp-for="Min_Degree"></label>
+        <input asp-for="Min_Degree" class="form-control" />
+        <span asp-validation-for="Min_Degree" class="text-danger"></span>
+
+    </div>
+
+    <div>
+        <label asp-for="hourse"></label>
+        <input asp-for="hourse" class="form-control" />
+        <span asp-validation-for="hourse" class="text-danger"></span>
+
+    </div>
+
+    <div>
+        <label>Department_ID</label>
+        <select name="Dep_ID">
+            @foreach (Department department in Model.departments)
+                if (department.Department_ID == Model.Dep_ID)
+                {
+                    <option value="@department.Department_ID" selected>@department.Dep_Name</option>
+                }
+                else
+                {
+                    <option value="@department.Department_ID">@department.Dep_Name</option>
+                }
+        </select>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>
+
+<br />
+<a href="/Instructor/ShowAll">Back to List</a>

@@ -1,0 +1,62 @@
+﻿@using Lab2.Models.ViewModels
+
+@model InstructorVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form action="/Instructor/SaveEdit/@Model.Inst_Id" method="post">
+    <input type="hidden" name="Inst_Id" value="@Model.Inst_Id" />
+    <div>
+        <label asp-for="Inst_Name"></label>
+        <input asp-for="Inst_Name" class="form-control">
+
+    </div>
+
+    <div>
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control">
+    </div>
+
+
+    <div>
+        <label asp-for="Adress"></label>
+        <input asp-for="Adress" class="form-control">
+    </div>
+
+
+    <div>
+        <label>Course_ID</label>
+        <select name="Course_id">
+                @foreach(Course course in Model.courses)
+                    if(course.Course_ID == Model.Course_id){
+                        <option value="@course.Course_ID" selected>@course.Course_Name</option>
+                    }
+                    else
+                    {
+                        <option value="@course.Course_ID">@course.Course_Name</option>
+                    }
+        </select>
+    </div>
+
+    <div>
+        <label>Department_ID</label>
+        <select name="Dep_ID">
+            @foreach (Department department in Model.departments)
+                if (department.Department_ID == Model.Dep_ID)
+                {
+                    <option value="@department.Department_ID" selected>@department.Dep_Name</option>
+                }
+                else
+                {
+                    <option value="@department.Department_ID">@department.Dep_Name</option>
+                }
+        </select>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>
+
+<br />
+<a href="/Instructor/ShowAll">Back to List</a>

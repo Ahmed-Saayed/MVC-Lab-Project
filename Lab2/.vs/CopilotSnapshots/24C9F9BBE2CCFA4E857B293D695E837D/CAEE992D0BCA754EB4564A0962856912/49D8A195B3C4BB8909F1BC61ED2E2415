@@ -1,0 +1,62 @@
+﻿using Humanizer;
+using Lab2.Models.ViewModels;
+using Lab2.Models;
+using Microsoft.AspNetCore.Mvc;
+using Lab2.Services;
+
+
+namespace Lab2.Controllers
+{
+    public class CourseController : Controller
+    {
+        DataCon con = new DataCon();
+        public IActionResult Add_Course()
+        {
+            CourseVM coursevm = new();
+
+            coursevm.departments = con.Departments.ToList();
+            return View("Add_Course", coursevm);
+        }
+
+        [HttpPost]
+        public IActionResult SaveAdded(CourseVM coursevm)
+        {
+            // First, ensure departments list is always available
+            if (coursevm.departments == null)
+                coursevm.departments = con.Departments.ToList();
+
+            // Check basic DataAnnotation validations
+            if (!ModelState.IsValid)
+            {
+                return View("Add_Course", coursevm);
+            }
+
+            // Check custom business validations
+            var errors = Lab2.Services.CourseValidationService.Validate(coursevm, con);
+            foreach (var e in errors)
+            {
+                ModelState.AddModelError(e.Key, e.Value);
+            }
+
+            // If any errors were added, return the view with the model
+            if (!ModelState.IsValid)
+            {
+                return View("Add_Course", coursevm);
+            }
+
+            // No errors, save the course
+            var course = new Course
+            {
+                Course_Name = coursevm.Course_Name,
+                Degree = coursevm.Degree,
+                Min_Degree = coursevm.Min_Degree,
+                hourse = coursevm.hourse,
+                Dep_ID = coursevm.Dep_ID
+            };
+
+            con.Courses.Add(course);
+            con.SaveChanges();
+            return RedirectToAction("ShowAll", "Instructor");
+        }
+    }
+}

@@ -1,0 +1,57 @@
+﻿@using Lab2.Models.ViewModels
+@model CourseVM
+@{
+    ViewData["Title"] = "Add_Course";
+    SelectList options = new SelectList(Model.departments, "Department_ID", "Dep_Name");
+}
+
+<h1>Add Course</h1>
+
+<form asp-action="SaveAdded" asp-controller="Course" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Course_Name"></label>
+        <div class="text-danger small" asp-validation-for="Course_Name"></div>
+        <input asp-for="Course_Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Degree"></label>
+        <div class="text-danger small" asp-validation-for="Degree"></div>
+        <input asp-for="Degree" type="number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Min_Degree"></label>
+        <div class="text-danger small" asp-validation-for="Min_Degree"></div>
+        <input asp-for="Min_Degree" type="number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="hourse"></label>
+        <div class="text-danger small" asp-validation-for="hourse"></div>
+        <input asp-for="hourse" type="number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Dep_ID">Department</label>
+        <div class="text-danger small" asp-validation-for="Dep_ID"></div>
+        <select asp-for="Dep_ID" asp-items="@options" class="form-select">
+            <option value="">-- Select Department --</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-success mt-2" />
+</form>
+
+@section Scripts {
+    <script>
+        $(function() {
+            // Enable real-time validation on blur (when user leaves a field)
+            var form = $("form");
+            form.on("blur change", "input, select, textarea", function() {
+                $(this).valid();
+            });
+        });
+    </script>
+}

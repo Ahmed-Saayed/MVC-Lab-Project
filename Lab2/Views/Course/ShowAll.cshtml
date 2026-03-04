@@ -1,0 +1,27 @@
+﻿@model List<Course>
+@{
+    ViewData["Title"] = "ShowAll";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+<h1>Show_All_Courses</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    @foreach (Course item in Model)
+    {
+        <tr>
+            <td>@item.Course_ID</td>
+            <td>@item.Course_Name</td>
+            <td>
+                <a href="/Course/Edit/@item.Course_ID">Edit</a>
+            </td>
+            <td>
+                <a href="/Course/Delete/@item.Course_ID">Delete</a>
+            </td>  
+        </tr>
+    }
+
+</table>

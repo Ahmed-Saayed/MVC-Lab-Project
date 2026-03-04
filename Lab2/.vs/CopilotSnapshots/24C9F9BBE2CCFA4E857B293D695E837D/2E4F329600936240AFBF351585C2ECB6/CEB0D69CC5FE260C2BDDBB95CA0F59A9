@@ -1,0 +1,31 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Lab2.Models.Validation
+{
+    public class MoreThanAttribute : ValidationAttribute
+    {
+        public int Max { get; set; }
+        public int Min { get; set; }
+
+        public MoreThanAttribute(int maxval)
+        {
+            Max = maxval;
+        }
+
+        public override bool IsValid(object? value)
+        {
+            if (value == null)
+                return true;
+
+            if (!int.TryParse(value.ToString(), out int val))
+                return false;
+
+            // Check if value is between Min and Max
+            if (val >= Min && val <= Max)
+                return true;
+
+            ErrorMessage = $"Value must be between {Min} and {Max}";
+            return false;
+        }
+    }
+}
