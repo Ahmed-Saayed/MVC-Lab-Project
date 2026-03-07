@@ -3,6 +3,7 @@
 @model InstructorVM
 @{
     ViewData["Title"] = "Add_Instructor";
+    SelectList options = new SelectList(Model.departments, "Department_ID", "Dep_Name");
 }
 
 <h1>Add_Instructor</h1>
@@ -10,24 +11,23 @@
 <form action="/Instructor/SaveAdded/" method="post">
 
     <div>
-
-        <label>Name</label>
-        <input type="text" name="Inst_Name" value="@Model.Inst_Name" />
+        <label asp-for="Inst_Name"></label>
+        <input asp-for="Inst_Name" class="form-control" />
     </div>
 
     <div>
-        <label>Image</label>
-        <input type="text" name="Image" value="@Model.Image" />
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control" />
     </div>
 
     <div>
-        <label>Address</label>
-        <input type="text" name="Adress" value="@Model.Adress" />
+        <label asp-for="Adress"></label>
+        <input asp-for="Adress" class="form-control" />
     </div>
 
     <div>
-        <label>Salary</label>
-        <input type="text" name="salary" value="@Model.salary" />
+        <label asp-for="salary"></label>
+        <input asp-for="salary" class="form-control" />
     </div>
 
     <div>
@@ -41,12 +41,9 @@
     </div>
 
     <div>
-        <label>Department</label>
-        <select name="Dep_ID">
-            @foreach (Department department in Model.departments)
-            {
-                <option value="@department.Department_ID">@department.Dep_Name</option>
-            }
+        <label asp-for="Dep_ID">Department</label>
+        <select asp-for="Dep_ID" asp-items="@options" class="form-select">
+            <option value="">-- Select Department --</option>
         </select>
     </div>
 

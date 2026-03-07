@@ -1,8 +1,9 @@
 ﻿using Humanizer;
-using Lab2.Models.ViewModels;
 using Lab2.Models;
-using Microsoft.AspNetCore.Mvc;
+using Lab2.Models.ViewModels;
 using Lab2.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Lab2.Controllers
@@ -91,6 +92,17 @@ namespace Lab2.Controllers
          
            course.Delete(id);
            return RedirectToAction("ShowAll", "Course");
+        }
+
+        public ActionResult Search(string courseName)
+        {
+            var courses = string.IsNullOrEmpty(courseName)
+                ? new List<Course>()
+                : con.Courses
+                    .Where(c => c.Course_Name == courseName)
+                    .ToList();
+
+            return View("ShowAll", courses);
         }
     }
 }

@@ -253,3 +253,4 @@ C:\Users\AHMED\Desktop\Folders\ITI\MVC\Lab2\Lab2\obj\Debug\net8.0\staticwebasset
 C:\Users\AHMED\Desktop\Folders\ITI\MVC\Lab2\Lab2\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\AHMED\Desktop\Folders\ITI\MVC\Lab2\Lab2\obj\Debug\net8.0\swae.build.ex.cache
 C:\Users\AHMED\Desktop\Folders\ITI\MVC\Lab2\Lab2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\AHMED\Desktop\Folders\ITI\MVC\Lab2\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json

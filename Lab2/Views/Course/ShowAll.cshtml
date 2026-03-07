@@ -3,6 +3,12 @@
     ViewData["Title"] = "ShowAll";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
+
+<form asp-controller="Course" asp-action="Search" method="get">
+    <input type="text" name="courseName" placeholder="Enter course name" />
+    <button type="submit">Search</button>
+</form>
+
 <h1>Show_All_Courses</h1>
 <table class="table table-bordered table-hover">
     <tr>
