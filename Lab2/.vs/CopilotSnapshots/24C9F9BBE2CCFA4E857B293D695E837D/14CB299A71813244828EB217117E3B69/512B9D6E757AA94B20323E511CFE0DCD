@@ -1,9 +1,0 @@
-﻿using Lab2.Models;
-
-namespace Lab2.Services
-{
-    public interface ICourseRepo : IRepo<Course>
-    {
-        // Additional methods specific to Course can be added here
-    }
-}

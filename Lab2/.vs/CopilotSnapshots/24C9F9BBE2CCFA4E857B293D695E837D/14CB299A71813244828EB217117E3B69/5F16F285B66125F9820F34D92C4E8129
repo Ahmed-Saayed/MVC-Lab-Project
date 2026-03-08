@@ -1,8 +1,0 @@
-﻿namespace Lab2.Services
-{
-    public interface IRepo<T>
-    {
-        void Add(T entity);
-        IEnumerable<T> GetAll();
-    }
-}
