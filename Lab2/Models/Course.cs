@@ -19,7 +19,6 @@ namespace Lab2.Models
         public int Dep_ID { get; set; }
         public Department? Department { get; set; }
         public List<Instructor>? instructors { get; set; }
-        public List<Trainee>? trainees { get; set; }
         public List<crsResult>? crsResults { get; set; }
 
     }

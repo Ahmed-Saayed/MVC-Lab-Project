@@ -1,0 +1,19 @@
+﻿@using Lab2.Models.ViewModels
+@model ShowResult;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h2>Trainee Name = @Model.TraineeName</h2>
+<h2>Course Name = @Model.CourseName</h2>
+
+@if(Model.ok)
+{
+    <h2 style="color:lawngreen">Result = @Model.Degree</h2>
+}
+else
+{
+    <h2 style="color:red">Result = @Model.Degree</h2>
+}
